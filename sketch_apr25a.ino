@@ -11,9 +11,8 @@ Adafruit_BME280 bme;
  
 float temperature, humidity, pressure, altitude;
  
-/*Put your SSID & Password*/
-const char* ssid = "AWT";  // Enter SSID here
-const char* password = "science.almafa";  //Enter Password here
+const char* ssid = "AWT";  
+const char* password = "science.almafa";
  
 WebServer server(80);             
  
@@ -26,10 +25,9 @@ void setup() {
   Serial.println("Connecting to ");
   Serial.println(ssid);
  
-  //connect to your local wi-fi network
+  
   WiFi.begin(ssid, password);
  
-  //check wi-fi is connected to wi-fi network
   while (WiFi.status() != WL_CONNECTED) {
   delay(1000);
   Serial.print(".");
